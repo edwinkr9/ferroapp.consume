@@ -1,0 +1,79 @@
+﻿@model IEnumerable<FerroApp.Consume.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="section_content section_content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="title-1 m-b-25">Clientes</h2>
+                    <table class="table table-borderless table-striped table-earning">
+                        <thead>
+                            <tr>
+                                @*<th>
+                                    @Html.DisplayNameFor(model => model.IdCliente)
+                                </th>*@
+                                @*<th>
+                                    @Html.DisplayNameFor(model => model.IdUsuario)
+                                </th>*@
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombres)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ApellidoPaterno)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ApellidoMaterno)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Direccion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Cp)
+                                </th>
+                                @*<th></th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @*<td>
+                                        @Html.DisplayFor(modelItem => item.IdCliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IdUsuario)
+                                    </td>*@
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombres)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ApellidoPaterno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ApellidoMaterno)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Direccion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cp)
+                                    </td>
+                                    @*<td>
+                                        @Html.ActionLink("Edit", "Update", new { IdCliente = item.IdCliente }) |
+                                        @Html.ActionLink("Details", "Details", new { IdCliente = item.IdCliente }) |
+                                        @Html.ActionLink("Delete", "Delete", new { IdCliente = item.IdCliente })
+                                    </td>*@
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

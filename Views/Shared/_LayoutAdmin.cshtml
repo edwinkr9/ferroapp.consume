@@ -1,0 +1,220 @@
+﻿@{
+    ViewData["Title"] = "_LayoutAdmin";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="~/css/font-face.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/font-awesome-4.7/css/font-awesome.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all" />
+    <link href="~/css/material-design-iconic-font.min.css" rel="stylesheet" media="all" />
+
+    <!-- Bootstrap CSS-->
+    <link href="~/Vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="all" />
+    <!-- Vendor CSS-->
+    <link href="~/Vendor/animsition/animsition.min.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/wow/animate.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/css-hamburgers/hamburgers.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/slick/slick.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/select2/select2.min.css" rel="stylesheet" media="all" />
+    <link href="~/Vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all" />
+
+    <!-- Main CSS-->
+    <link href="~/css/theme.css" rel="stylesheet" media="all" />
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-cart-arrow-down"></i>Productos
+                            </a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="/Pages/AdminPages/AddProduct">Agregar Producto</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Modificar Producto</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-shipping-fast"></i>
+                                <i class="fab fa-usps" style="color:white"></i>Pedidos
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-user-plus" style="color:white"></i>Gerentes
+                            </a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Agregar Gerentes</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Modificar Gerentes</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="/Index">
+                    <img src="~/img/logo.png" alt="G" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-cart-arrow-down" style="color:white"></i>Productos
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="/Producto/Index">Inventario</a>
+                                </li>
+                                <li>
+                                    <a href="/Producto/Create">Agregar Producto</a>
+                                </li>
+                            </ul>
+                        </li>
+                        @*<li>
+                            <a href="chart.html">
+                                <i class="fas fa-shipping-fast"></i>Pedidos
+                            </a>
+                        </li>*@
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-user-plus" style="color:white"></i>Gerentes
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="/AdminPages/AddManager">Agregar Gerente</a>
+                                </li>
+                                <li>
+                                    <a href="/AdminPages/ModifyManager">Modificar Gerente</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-user-plus" style="color:white"></i>Clientes
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="~/Cliente/Index">Ver Clientes</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="has-sub">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                            <a class="js-arrow" href="/Producto/Productos">
+                                <i class="fas fa-arrow-circle-left" style="color:white"></i>REGRESAR
+                               
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-container">
+            <header class="header-desktop">
+            </header>
+            @*Jquery JS*@
+            <script src="~/Vendor/jquery/jquery-3.2.1.min.js"></script>
+            @*Bootstrap JS*@
+            <script src="~/Vendor/bootstrap-4.1/popper.min.js"></script>
+            <script src="~/Vendor/bootstrap-4.1/bootstrap.min.js"></script>
+            @*Vendor JS*@
+            <script src="~/Vendor/slick/slick.min.js"></script>
+
+            <script src="~/Vendor/wow/wow.min.js"></script>
+            <script src="~/Vendor/animsition/animsition.min.js"></script>
+            <script src="~/Vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+
+            <script src="~/Vendor/counter-up/jquery.waypoints.min.js"></script>
+            <script src="~/Vendor/counter-up/jquery.counterup.min.js"></script>
+
+            <script src="~/Vendor/circle-progress/circle-progress.min.js"></script>
+            <script src="~/Vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+            <script src="~/Vendor/chartjs/Chart.bundle.min.js"></script>
+            <script src="~/Vendor/select2/select2.min.js"></script>
+
+            @*Main JS*@
+            <script src="~/js/main.js"></script>
+            @*HEADER DESKTOP*@
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

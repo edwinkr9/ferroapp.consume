@@ -1,0 +1,79 @@
+﻿@model FerroApp.Consume.Models.Producto
+
+@{
+    ViewData["Title"] = "Detalles";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="section_content section_content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="title-1 m-b-25">Detalles del Producto</h2>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form asp-action="Detalles">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                @*<div class="form-group">
+                                    <label asp-for="Codigo" class="control-label"></label>
+                                    <input asp-for="Codigo" class="form-control" readonly />
+                                    <span asp-validation-for="Codigo" class="text-danger"></span>
+                                </div>*@
+                                <div class="form-group">
+                                    <label asp-for="Clave" class="control-label"></label>
+                                    <input asp-for="Clave" class="form-control" readonly />
+                                    <span asp-validation-for="Clave" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Nombre" class="control-label"></label>
+                                    <input asp-for="Nombre" class="form-control" readonly />
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Precio" class="control-label"></label>
+                                    <input asp-for="Precio" class="form-control" readonly />
+                                    <span asp-validation-for="Precio" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Marca" class="control-label"></label>
+                                    <input asp-for="Marca" class="form-control" readonly />
+                                    <span asp-validation-for="Marca" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Categoria" class="control-label"></label>
+                                    <input asp-for="Categoria" class="form-control" readonly />
+                                    <span asp-validation-for="Categoria" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Stock" class="control-label"></label>
+                                    <input asp-for="Stock" class="form-control" readonly />
+                                    <span asp-validation-for="Stock" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Descripcion" class="control-label"></label>
+                                    <input asp-for="Descripcion" class="form-control" readonly />
+                                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Image" class="control-label"></label>
+                                    <input asp-for="Image" class="form-control" readonly />
+                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                </div>
+                                @*<div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>*@
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a asp-action="Index">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
