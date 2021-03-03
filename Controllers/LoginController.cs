@@ -22,7 +22,7 @@ namespace FerroApp.Consume.Controllers
             _logger = logger;
         }
 
-        HttpClient Client = new HttpClient();
+        HttpClient client = new HttpClient();
         public string url = "https://localhost:44367/api/usuario";
         //public string urlv = "https://localhost:44367/api/cliente";
         public IActionResult Index()
@@ -33,14 +33,14 @@ namespace FerroApp.Consume.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(Login login, Usuario usuario)
         {
-            var json = await Client.GetStringAsync(url);
+            var json = await client.GetStringAsync(url);
 
             var Usuarios = JsonConvert.DeserializeObject<List<Usuario>>(json);
-            var _Usuario = Usuarios.FirstOrDefault(e => usuario.Correo.Equals(login.Correo) && usuario.Contraseña.Equals(login.Password));
+            var _Usuario = Usuarios.FirstOrDefault(e => e.Correo.Equals(login.Email) && e.Contraseña.Equals(login.Password));
             if (_Usuario != null)
             {
                 HttpContext.Session.SetString("Id", _Usuario.IdUsuario.ToString());
-                return RedirectToAction("Index", "Producto");
+                return RedirectToAction("Usuario");
                 //return View();
 
             }
@@ -60,7 +60,7 @@ namespace FerroApp.Consume.Controllers
         {
             if (HttpContext.Session.GetString("Id") != null)
             {
-                return RedirectToAction("Index", "Producto");
+                return RedirectToAction("Index", "Home");
 
             }
             else
@@ -73,7 +73,7 @@ namespace FerroApp.Consume.Controllers
         public IActionResult LogOut()
         {
             HttpContext.Session.Remove("Id");
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Productos", "Producto");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using FerroApp.Consume.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,14 @@ namespace FerroApp.Consume.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
         {
-            return View();
+            _logger = logger;
         }
-        public async Task<ActionResult> Productos()
+
+        public async Task<ActionResult> Index()
         {
             var httpClient = new HttpClient();
             var Json = await httpClient.GetStringAsync("https://localhost:44367/api/producto");

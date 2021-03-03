@@ -64,7 +64,7 @@ namespace FerroApp.Consume
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Producto}/{action=Productos}/{id?}");
             });
         }
     }

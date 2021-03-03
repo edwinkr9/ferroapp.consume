@@ -16,8 +16,8 @@
                             <thead>
                                 <tr>
                                     @*<th>
-                                        @Html.DisplayNameFor(model => model.Codigo)
-                                    </th>*@
+                                            @Html.DisplayNameFor(model => model.Codigo)
+                                        </th>*@
                                     <th>
                                         @Html.DisplayNameFor(model => model.Clave)
                                     </th>
@@ -31,8 +31,8 @@
                                         @Html.DisplayNameFor(model => model.Stock)
                                     </th>
                                     @*<th>
-            @Html.DisplayNameFor(model => model.Categoria)
-        </th>*@
+                                            @Html.DisplayNameFor(model => model.Categoria)
+                                        </th>*@
                                     <th>
                                         Acciones
                                     </th>
@@ -41,29 +41,30 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Clave)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Nombre)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Precio)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Stock)
-                            </td>
-                            @*<td>
-                                @Html.DisplayFor(modelItem => item.Categoria)
-                            </td>*@
-                        <td>
-                            @Html.ActionLink("Editar", "Update", new { Codigo = item.Codigo,Clave = item.Clave, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion, Image = item.Image}) |
-                            @Html.ActionLink("Detalles", "Detalles", new {Codigo = item.Codigo, Clave = item.Clave, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion, Image = item.Image}) |
-                            @Html.ActionLink("Borrar", "DeleteProduct", new { Codigo = item.Codigo, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion }) |
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Clave)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Nombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Precio)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Stock)
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.Categoria)
+                                            </td>*@
+                                        <td>
+                                            @Html.ActionLink("Editar", "Update", new { Codigo = item.Codigo, Clave = item.Clave, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion, Image = item.Image }) |
+                                            @Html.ActionLink("Detalles", "Detalles", new { Codigo = item.Codigo, Clave = item.Clave, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion, Image = item.Image }) |
+                                            @Html.ActionLink("Borrar", "DeleteProduct", new { Codigo = item.Codigo, Nombre = item.Nombre, Precio = item.Precio, Marca = item.Marca, Categoria = item.Categoria, Stock = item.Stock, Descripcion = item.Descripcion }) |
 
-                        </td>
-                        </tr>}
+                                        </td>
+                                    </tr>
+}
                             </tbody>
                         </table>
                     </div>

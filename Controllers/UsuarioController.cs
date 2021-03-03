@@ -73,7 +73,9 @@ namespace FerroApp.Consume.Controllers
         public ActionResult Create(Usuario CrearUsuario, int IdUsuario)
         {
             using (var client = new HttpClient())
+
             {
+
                 client.BaseAddress = new Uri("https://localhost:44367/api/usuario");
                 var CrearUsuar = client.PostAsJsonAsync<Usuario>("https://localhost:44367/api/usuario", CrearUsuario);
                 CrearUsuar.Wait();
@@ -81,7 +83,7 @@ namespace FerroApp.Consume.Controllers
                 if (CreaResult.IsSuccessStatusCode)
 
                     //return View();
-               return RedirectToAction/*("Index")*/("Create", "Cliente");
+               return RedirectToAction/*("Index")*/("Index", "Login");
 
             }
             //return View(CrearUsuario);

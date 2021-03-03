@@ -690,7 +690,6 @@ C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actu
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Index.cshtml.g.cs
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Update.cshtml.g.cs
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Producto\Create.cshtml.g.cs
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Producto\DeleteProduct.cshtml.g.cs
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Producto\Detalles.cshtml.g.cs
@@ -716,5 +715,8 @@ C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actu
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\FerroApp.Consume.dll
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\FerroApp.Consume.pdb
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\FerroApp.Consume.genruntimeconfig.cache
-C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\FerroApp.Consume.csprojAssemblyReference.cache
 C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutAdmin2.cshtml.g.cs
+C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\FerroApp.Consume.csprojAssemblyReference.cache
+C:\Users\carna\Desktop\Version 3.0 Proyecto FerroApp Nuevo datatype y views actualizadas con nuevos controlladores\FerroApp.Consume\obj\Debug\netcoreapp3.1\Razor\Views\Carrito\Index.cshtml.g.cs

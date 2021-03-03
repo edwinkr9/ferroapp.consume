@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<FerroApp.Consume.Models.Producto>
-<!-- Page Content -->
+@{ ViewData["Title"] = "";
+    Layout = "~/Views/Shared/_Layout2.cshtml"; }
+<br>
+<br>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 <link href="~/css/Multi.css" rel="stylesheet" />
-<div class="container">
 
+<div class="container">
     <div class="row">
 
         <div class="col-lg-3">
 
             <h2 class="my-4">Categorías</h2>
             <div class="list-group">
-                <a href="#" class="list-group-item">Herramientas</a>
-                <a href="#" class="list-group-item">Pinturas</a>
+                <a href="#" class="list-group-item">Categoría 1</a>
+                <a href="#" class="list-group-item">Categoría 2</a>
                 <a href="#" class="list-group-item">Categoría 3</a>
             </div>
 
         </div>
-        <!-- /.col-lg-3 -->
-  
         <div class="col-lg-9 mt-3">
-
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -46,40 +46,97 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
-            @foreach (var item in Model)
-            {
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        @*<a href="#"><img class="card-img-top" src="~/img/martillo.svg" alt=""></a>*@
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a>@Html.DisplayFor(modelItem => item.Nombre)</a>
-                                @*@<a href="#">@Html.DisplayFor(modelItem => item.Codigo)</a>@*@
-                            </h4>
-                            <h4 class="text">
-                                <p>Marca @Html.DisplayFor(modelItem => item.Marca)</p>
-                            </h4>
-                            <h5>Precio $@Html.DisplayFor(modelItem => item.Precio)</h5>
-                            <h5>Existentes: @Html.DisplayFor(modelItem => item.Stock)</h5>
-                            @*@<h5></h5>@
-                        @<p>@Html.DisplayFor(modelItem => item.Categoria)</p>@*@
-                            @**<a href="#">Leer más...</a>*@
-                        </div>
-                        <div class="card-footer">
-                            <input type="number" class="form-control" id="inputAddress">
-                            <div class="buttons"> <button class="cart-button"> <span class="add-to-cart">Agregar</span> <span class="added">Añadido</span> <i class="fas fa-shopping-cart" style="color:white"></i> <i class="fas fa-square" style="color:white"></i> </button> </div>
+
+
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            @*<a href="#"><img class="card-img-top" src="~/img/martillo.svg" alt=""></a>*@
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a>@Html.DisplayFor(modelItem => item.Nombre)</a>
+                                    @*@<a href="#">@Html.DisplayFor(modelItem => item.Codigo)</a>@*@
+                                </h4>
+                                <h4 class="text">
+                                    <p>Marca @Html.DisplayFor(modelItem => item.Marca)</p>
+                                </h4>
+                                <h5>Precio $@Html.DisplayFor(modelItem => item.Precio)</h5>
+                                <h5>Existentes: @Html.DisplayFor(modelItem => item.Stock)</h5>
+                                <h5>Descripcion: @Html.DisplayFor(modelItem => item.Descripcion)</h5>
+                                @*@<h5></h5>@
+                                    @<p>@Html.DisplayFor(modelItem => item.Categoria)</p>@*@
+                                @**<a href="#">Leer más...</a>*@
+                            </div>
+                            <div class="card-footer">
+                                <input type="number" class="form-control" id="inputAddress" min="1" value="1">
+                                <div class="buttons"> <button class="cart-button"> <span class="add-to-cart">Agregar</span> <span class="added">Añadido</span> <i class="fas fa-shopping-cart" style="color:white"></i> <i class="fas fa-square" style="color:white"></i> </button> </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
+        </div>
 
-        
+
+
+
+        @*<p>
+                <a asp-action="Create">Create New</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Codigo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Precio)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Marca)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Categoria)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Codigo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Precio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Marca)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Categoria)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>*@
     </div>
 </div>
-
-            <!-- /.container -->
-            <!-- Bootstrap core JavaScript -->
-            <script src="~/js/personalizado.js"></script>
-            <script src="~/Vendor/jquery/jquery.min.js"></script>
-            <script src="~/Vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/personalizado.js"></script>
+<script src="~/Vendor/jquery/jquery.min.js"></script>
+<script src="~/Vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

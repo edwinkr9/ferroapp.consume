@@ -1,4 +1,5 @@
 ﻿using FerroApp.Consume.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -11,8 +12,9 @@ namespace FerroApp.Consume.Controllers
 {
     public class ClienteController : Controller
     {
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(Cliente cliente)
         {
+            
             var httpClient = new HttpClient();
             var Json = await httpClient.GetStringAsync("https://localhost:44367/api/cliente");
             var ListClientes = JsonConvert.DeserializeObject<ApiResponse<IEnumerable<Cliente>>>(Json);
@@ -30,8 +32,11 @@ namespace FerroApp.Consume.Controllers
         public ActionResult Create(Cliente CrearCliente, int IdUsuario)
         {
             //string UserId;
+            
             using (var client = new HttpClient())
+               
             {
+                CrearCliente.IdUsuario = int.Parse(HttpContext.Session.GetString("Id"));
                 //if (TempData["UserId"])
 
                 //    ViewBag.UserId = TempData["UserId"].ToString();
@@ -43,7 +48,7 @@ namespace FerroApp.Consume.Controllers
                 var CreaResult = CrearClient.Result;
                 if (CreaResult.IsSuccessStatusCode)
                     //return View();
-                return RedirectToAction("Productos", "Producto");
+                return RedirectToAction("Index", "Home");
 
             }
             //return RedirectToAction("Productos","Producto");

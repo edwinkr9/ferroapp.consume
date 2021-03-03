@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FerroApp.Consume.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 
@@ -12,6 +13,13 @@ namespace FerroApp.Consume.Controllers
 {
     public class ProductoController : Controller
     {
+        private readonly ILogger<ProductoController> _logger;
+
+        public ProductoController(ILogger<ProductoController> logger)
+        {
+            _logger = logger;
+        }
+
         public async Task<ActionResult> Index()
         {
             var httpClient = new HttpClient();
