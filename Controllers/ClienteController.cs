@@ -12,7 +12,7 @@ namespace FerroApp.Consume.Controllers
 {
     public class ClienteController : Controller
     {
-        public async Task<ActionResult> Index(Cliente cliente)
+        public async Task<ActionResult> Index(int id)
         {
             
             var httpClient = new HttpClient();
